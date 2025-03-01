@@ -19,3 +19,13 @@ function sommeTrois(a, b, c) {
 }
 
 console.log(sommeTrois(1,2,3))
+
+
+let student  = {
+  nom:"kevin",
+  age:17,
+  size:1.83,
+  room:"premiere ti",
+  location:"enia",
+};
+console.log(student)
