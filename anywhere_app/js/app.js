@@ -29,3 +29,18 @@ let student  = {
   location:"enia",
 };
 console.log(student)
+
+function factorielle (n) {
+  if (n < 0) {
+    throw new error ("le parametre doit etre un entier naturel.");
+  } else if (n === 0 || n === 1) {
+
+    return 1;
+  } else {
+    return n *
+    factorielle(n - 1);
+  }
+
+}
+console.log(factorielle(5));
+
