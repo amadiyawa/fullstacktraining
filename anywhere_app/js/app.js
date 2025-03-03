@@ -44,3 +44,102 @@ function primeNumber(n) {
   }
 }
 console.log(primeNumber(13));
+
+
+
+function pairNumber(n) {
+  if ( n % 2 === 0 ) {
+    console.log( n + "is pair");
+  } else {
+    console.log( n + "is impair");
+  }
+}
+pairNumber(13);
+
+
+
+
+function findMax(num1, num2, num3){
+  return Math.max(num1, num2, num3);
+}
+console.log(findMax(9,7,3));
+
+
+
+function sumFirstN(n) {
+  return (n * (n + 1)) / 2;
+}
+console.log(sumFirstN(5));
+
+
+
+
+function fact(n) {
+  let result = 1;
+  for (let i = 1; i <= n; i++){
+    result *= i;
+  }
+ return result;
+}
+console.log(fact(4));
+
+
+
+function isLeapYear(year) {
+   return (year % 4 === 0 && year % 100 !==0)||( year % 400 === 0);
+
+  }
+
+console.log(isLeapYear(2020));
+console.log(isLeapYear(1900));
+
+
+
+function printMultiplyTable(number) {
+for ( let i = 1; i <= 10; i++){
+ console.log (number + "x" + i + "=" + (number * i));
+}
+}
+printMultiplyTable(5);
+
+
+
+
+function power(base,exponent){
+  return Math.pow(base,exponent);
+  }
+  console.log(power(5,3));
+
+
+
+
+
+function Average(n) {
+  let somme = 0;
+  for (let i = 0; n.length; i++) {
+    somme += n[i];
+  }
+return somme;
+}
+console.log(Average([4,6,8]));
+
+
+
+function findMinAndMax(n) {
+  let min = Math.min(n);
+  let max = Math.max(n);
+  return Math.max(min, max);
+}
+console.log(findMinAndMax([3,7,2,9,5,4]));
+
+
+
+
+function convertKilometersToMeters(kilometers){
+  return kilometers * 1000;
+
+}
+console.log(convertKilometersToMeters(4));
+
+
+
