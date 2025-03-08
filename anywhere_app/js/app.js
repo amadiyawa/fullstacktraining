@@ -45,8 +45,6 @@ function primeNumber(n) {
 }
 console.log(primeNumber(13));
 
-
-
 function pairNumber(n) {
   if ( n % 2 === 0 ) {
     console.log( n + "is pair");
@@ -56,23 +54,19 @@ function pairNumber(n) {
 }
 pairNumber(13);
 
-
-
-
 function findMax(num1, num2, num3){
   return Math.max(num1, num2, num3);
 }
 console.log(findMax(9,7,3));
 
-
-
 function sumFirstN(n) {
-  return (n * (n + 1)) / 2;
+  let i, sum = 0;
+  for (i = 0; i < n; i++) {
+    sum = sum + i;
+  }
+  return sum
 }
-console.log(sumFirstN(5));
-
-
-
+console.log("The sum of the first 6 integers is " + sumFirstN(6));
 
 function fact(n) {
   let result = 1;
@@ -83,63 +77,51 @@ function fact(n) {
 }
 console.log(fact(4));
 
-
-
 function isLeapYear(year) {
-   return (year % 4 === 0 && year % 100 !==0)||( year % 400 === 0);
-
-  }
-
-console.log(isLeapYear(2020));
-console.log(isLeapYear(1900));
-
-
-
-function printMultiplyTable(number) {
-for ( let i = 1; i <= 10; i++){
- console.log (number + "x" + i + "=" + (number * i));
+   return ((year % 4 === 0) || ((year % 100 !==0) && (year % 400 === 0)));
 }
+console.log(isLeapYear(2025));
+console.log(isLeapYear(2024));
+
+function printMultiplyTable(n) {
+  for ( let i = 1; i <= 10; i++){
+    console.log (n + " x " + i + " = " + (n * i));
+  }
 }
 printMultiplyTable(5);
 
-
-
-
-function power(base,exponent){
-  return Math.pow(base,exponent);
-  }
-  console.log(power(5,3));
-
-
-
-
-
-function Average(n) {
-  let somme = 0;
-  for (let i = 0; n.length; i++) {
-    somme += n[i];
-  }
-return somme;
-}
-console.log(Average([4,6,8]));
-
-
-
 function findMinAndMax(n) {
-  let min = Math.min(n);
-  let max = Math.max(n);
-  return Math.max(min, max);
+  return {
+    "minimum": Math.min(...n),
+    "maximum": Math.max(...n)
+  };
 }
 console.log(findMinAndMax([3,7,2,9,5,4]));
 
+const add = (a, b) => {
+  return a + b;
+}
+console.log(add(3,4));
 
+function average(...n) {
+  let somme = 0;
+  for (let i = 0; i < n.length; i++) {
+    somme += n[i];
+  }
+  return somme / n.length;
+}
+const numbers = [4, 6, 8, 9];
+console.log(average(...numbers));
 
+const sayHello = () => console.log("Hello")
+sayHello()
+
+function power(base,exponent){
+  return Math.pow(base,exponent);
+}
+console.log(power(5,3));
 
 function convertKilometersToMeters(kilometers){
   return kilometers * 1000;
-
 }
 console.log(convertKilometersToMeters(4));
-
-
-
