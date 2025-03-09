@@ -1,10 +1,3 @@
-const { JSDOM } = require('jsdom');
-const { window } = new JSDOM(`<!DOCTYPE html><p>Hello world</p>`);
-const { document } = window;
-
-let paragraphs = document.getElementsByTagName('p')
-console.log(paragraphs)
-
 function factorial(n) {
   if (n < 0) {
     return "not defined";
