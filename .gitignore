@@ -35,5 +35,8 @@ jspm_packages/
 *.sublime-project
 *.sublime-workspace
 
+# package-lock.json
+package-lock.json
+
 # Tailwind CSS build artifacts
 tailwind.config.js
